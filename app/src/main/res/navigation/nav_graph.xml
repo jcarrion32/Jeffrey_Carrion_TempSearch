@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_search_page">
+
+    <fragment
+        android:id="@+id/nav_search_page"
+        android:name="com.example.jeffreycarrion_tempsearch.views.CitySearchFragment">
+
+        <action
+            android:id="@+id/action_city_search_to_city_temp"
+            app:destination="@id/nav_city_temp"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_city_temp"
+        android:name="com.example.jeffreycarrion_tempsearch.views.CityTempFragment">
+
+        <action android:id="@+id/action_city_temp_to_city_detail"
+            app:destination="@id/nav_city_detail"/>
+
+        <argument
+            android:name="temp_units"
+            app:argType="string"/>
+
+        <argument
+            android:name="city_item"
+            app:argType="string"
+            app:nullable="true"/>
+
+        <action android:id="@+id/action_back_to_city_search"
+            app:destination="@id/nav_search_page"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_city_detail"
+        android:name="com.example.jeffreycarrion_tempsearch.views.TempDetailFragment">
+
+        <action android:id="@+id/action_back_to_city_temp"
+            app:destination="@id/nav_city_temp"/>
+
+
+
+        <argument
+            android:name="detail_item"
+            app:argType="com.example.jeffreycarrion_tempsearch.model.CityTemp"
+            app:nullable="true"/>
+    </fragment>
+
+
+
+</navigation>

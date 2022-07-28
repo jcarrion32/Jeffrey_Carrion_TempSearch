@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_search_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter City Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/btn_search_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search City"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_search_city"
+        android:layout_marginTop="12dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_temp_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search_city">
+
+        <RadioButton
+            android:id="@+id/rb_k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Kelvin" />
+        <RadioButton
+            android:id="@+id/rb_F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"/>
+        <RadioButton
+            android:id="@+id/rb_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius"/>
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
