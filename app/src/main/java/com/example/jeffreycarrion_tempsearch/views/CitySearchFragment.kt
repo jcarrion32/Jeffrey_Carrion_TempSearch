@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
 import androidx.navigation.fragment.findNavController
 import com.example.jeffreycarrion_tempsearch.databinding.FragmentCitySearchBinding
 

@@ -13,7 +13,8 @@ class TempDetailFragment: ViewModelFragment() {
 
     private lateinit var binding: FragmentTempDetailBinding
     private val args: TempDetailFragmentArgs by navArgs()
-    private lateinit var city: String
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,6 +40,8 @@ class TempDetailFragment: ViewModelFragment() {
                 is UIState.Success -> {
                     binding.apply {
 
+                        tvCityName.text = args.cityName
+
                         tvCityTempDetail.text = args.detailItem?.main?.temp.toString()
                         tvFeelsLikeDetails.text = args.detailItem?.main?.feels_like.toString()
 
@@ -47,11 +50,13 @@ class TempDetailFragment: ViewModelFragment() {
 
                     }
 
-//                    binding.ibBackCityTemp.setOnClickListener {
-//                        findNavController().navigate(
-//                            TempDetailFragmentDirections.actionBackToCityTemp()
-//                        )
-//                    }
+
+
+                    binding.ibBackCityTemp.setOnClickListener {
+                        findNavController().navigate(
+                            TempDetailFragmentDirections.actionBackToCityTemp(args.tempUnit, args.cityName)
+                        )
+                    }
                 }
             }
         }

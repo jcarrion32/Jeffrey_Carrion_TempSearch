@@ -69,7 +69,9 @@ class CityTempFragment : ViewModelFragment() {
     private fun openTempDetail(cityTemp: CityTemp){
         findNavController().navigate(
             CityTempFragmentDirections.actionCityTempToCityDetail(
-                cityTemp
+                cityTemp,
+                args.tempUnits,
+                args.cityItem
             )
         )
     }

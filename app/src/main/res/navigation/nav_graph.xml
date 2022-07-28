@@ -41,11 +41,18 @@
         <action android:id="@+id/action_back_to_city_temp"
             app:destination="@id/nav_city_temp"/>
 
-
-
         <argument
             android:name="detail_item"
             app:argType="com.example.jeffreycarrion_tempsearch.model.CityTemp"
+            app:nullable="true"/>
+
+        <argument
+            android:name="temp_unit"
+            app:argType="string"/>
+
+        <argument
+            android:name="city_name"
+            app:argType="string"
             app:nullable="true"/>
     </fragment>
 
