@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" 
-        android:singleLine="true"/>
+        android:singleLine="true"
+        android:inputType="textCapWords"/>
 
     <Button
         android:id="@+id/btn_search_city"

@@ -2,7 +2,6 @@ package com.example.jeffreycarrion_tempsearch.views
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jeffreycarrion_tempsearch.R
 import com.example.jeffreycarrion_tempsearch.databinding.CityTempItemBinding
@@ -27,11 +26,11 @@ class WeatherAdapter(
                 tvCityWeatherMain.text = item.weather[0].main
                 tvFeelsLike.text = item.main.feels_like.toString()
 
-                when(tvCityWeatherMain.text){
-                    "Rain" -> ivWeatherIc.setImageDrawable(R.drawable.ic_rain_foreground.toDrawable())
-                    "Clouds" -> ivWeatherIc.setImageDrawable(R.drawable.ic_cloudy_foreground.toDrawable())
-                    "Clear" -> ivWeatherIc.setImageDrawable(R.drawable.ic_sun_foreground.toDrawable())
-                    "Snow" -> ivWeatherIc.setImageDrawable(R.drawable.ic_sun_foreground.toDrawable())
+                when(item.weather[0].main){
+                    "Rain" -> ivWeatherIc.setBackgroundResource(R.drawable.ic_rain_foreground)
+                    "Clouds" -> ivWeatherIc.setBackgroundResource(R.drawable.ic_cloudy_foreground)
+                    "Clear" -> ivWeatherIc.setBackgroundResource(R.drawable.ic_sun_foreground)
+                    "Snow" -> ivWeatherIc.setBackgroundResource(R.drawable.ic_sun_foreground)
                 }
             }
 

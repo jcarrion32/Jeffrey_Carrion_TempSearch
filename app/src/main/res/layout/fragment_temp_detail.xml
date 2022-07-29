@@ -24,7 +24,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ib_back_city_temp"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="atlanta"
+        android:textSize="30sp"/>
 
     <TextView
         android:id="@+id/tv_city_temp_detail"
